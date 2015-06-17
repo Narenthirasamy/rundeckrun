@@ -287,35 +287,35 @@ class Rundeck(object):
                 logging level (default: 'INFO')
             asUser : str
                 user to run the job as
-            exclude-precedence : bool
+            excludePrecedence : bool
                 set the exclusion precedence (default True)
             hostname : str
                 hostname inclusion filter
             tags : str
                 tags inclusion filter
-            os-name : str
-                os-name inclusion filter
-            os-family : str
-                os-family inclusion filter
-            os-arch : str
-                os-arch inclusion filter
-            os-version : str
-                os-version inclusion filter
+            osName : str
+                osName inclusion filter
+            osFamily : str
+                osFamily inclusion filter
+            osArch : str
+                osArch inclusion filter
+            osVersion : str
+                osVersion inclusion filter
             name : str
                 name inclusion filter
-            exlude-hostname : str
+            excludeHostname : str
                 hostname exclusion filter
-            exlude-tags : str
+            excludeTags : str
                 tags exclusion filter
-            exlude-os-name : str
-                os-name exclusion filter
-            exlude-os-family : str
-                os-family exclusion filter
-            exlude-os-arch : str
-                os-arch exclusion filter
-            exlude-os-version : str
-                os-version exclusion filter
-            exlude-name : str
+            excludeOsName : str
+                osName exclusion filter
+            excludeOsFamily : str
+                osFamily exclusion filter
+            excludeOsArch : str
+                osArch exclusion filter
+            excludeOsVersion : str
+                osVersion exclusion filter
+            excludeName : str
                 name exclusion filter
 
         :return: Details about the Job Execution
@@ -595,7 +595,7 @@ class Rundeck(object):
                 an exact group path to exclude, special "-" setting matches top level jobs only
             jobExactFilter : str
                 an exact job name
-            exludeJobExactFilter : str
+            excludeJobExactFilter : str
                 an exact job name to exclude
             max : int
                 maximum number of results to include in response (default: 20)
@@ -697,29 +697,29 @@ class Rundeck(object):
                 hostname inclusion filter
             tags : str
                 tags inclusion filter
-            os-name : str
-                os-name inclusion filter
-            os-family : str
-                os-family inclusion filter
-            os-arch : str
-                os-arch inclusion filter
-            os-version : str
-                os-version inclusion filter
+            osName : str
+                osName inclusion filter
+            osFamily : str
+                osFamily inclusion filter
+            osArch : str
+                osArch inclusion filter
+            osVersion : str
+                osVersion inclusion filter
             name : str
                 name inclusion filter
-            exlude-hostname : str
+            excludeHostname : str
                 hostname exclusion filter
-            exlude-tags : str
+            excludeTags : str
                 tags exclusion filter
-            exlude-os-name : str
-                os-name exclusion filter
-            exlude-os-family : str
-                os-family exclusion filter
-            exlude-os-arch : str
-                os-arch exclusion filter
-            exlude-os-version : str
-                os-version exclusion filter
-            exlude-name : str
+            excludeOsName : str
+                osName exclusion filter
+            excludeOsFamily : str
+                osFamily exclusion filter
+            excludeOsArch : str
+                osArch exclusion filter
+            excludeOsVersion : str
+                osVersion exclusion filter
+            excludeName : str
                 name exclusion filter
 
         :return: Execution ID
@@ -759,29 +759,29 @@ class Rundeck(object):
                 hostname inclusion filter
             tags : str
                 tags inclusion filter
-            os-name : str
-                os-name inclusion filter
-            os-family : str
-                os-family inclusion filter
-            os-arch : str
-                os-arch inclusion filter
-            os-version : str
-                os-version inclusion filter
+            osName : str
+                osName inclusion filter
+            osFamily : str
+                osFamily inclusion filter
+            osArch : str
+                osArch inclusion filter
+            osVersion : str
+                osVersion inclusion filter
             name : str
                 name inclusion filter
-            exlude-hostname : str
+            excludeHostname : str
                 hostname exclusion filter
-            exlude-tags : str
+            excludeTags : str
                 tags exclusion filter
-            exlude-os-name : str
-                os-name exclusion filter
-            exlude-os-family : str
-                os-family exclusion filter
-            exlude-os-arch : str
-                os-arch exclusion filter
-            exlude-os-version : str
-                os-version exclusion filter
-            exlude-name : str
+            excludeOsName : str
+                osName exclusion filter
+            excludeOsFamily : str
+                osFamily exclusion filter
+            excludeOsArch : str
+                osArch exclusion filter
+            excludeOsVersion : str
+                osVersion exclusion filter
+            excludeName : str
                 name exclusion filter
 
         :return: Execution ID
@@ -821,29 +821,29 @@ class Rundeck(object):
                 hostname inclusion filter
             tags : str
                 tags inclusion filter
-            os-name : str
-                os-name inclusion filter
-            os-family : str
-                os-family inclusion filter
-            os-arch : str
-                os-arch inclusion filter
-            os-version : str
-                os-version inclusion filter
+            osName : str
+                osName inclusion filter
+            osFamily : str
+                osFamily inclusion filter
+            osArch : str
+                osArch inclusion filter
+            osVersion : str
+                osVersion inclusion filter
             name : str
                 name inclusion filter
-            exlude-hostname : str
+            excludeHostname : str
                 hostname exclusion filter
-            exlude-tags : str
+            excludeTags : str
                 tags exclusion filter
-            exlude-os-name : str
-                os-name exclusion filter
-            exlude-os-family : str
-                os-family exclusion filter
-            exlude-os-arch : str
-                os-arch exclusion filter
-            exlude-os-version : str
-                os-version exclusion filter
-            exlude-name : str
+            excludeOsName : str
+                osName exclusion filter
+            excludeOsFamily : str
+                osFamily exclusion filter
+            excludeOsArch : str
+                osArch exclusion filter
+            excludeOsVersion : str
+                osVersion exclusion filter
+            excludeName : str
                 name exclusion filter
 
         :return: Execution ID
@@ -918,29 +918,29 @@ class Rundeck(object):
                 hostname inclusion filter
             tags : str
                 tags inclusion filter
-            os-name : str
-                os-name inclusion filter
-            os-family : str
-                os-family inclusion filter
-            os-arch : str
-                os-arch inclusion filter
-            os-version : str
-                os-version inclusion filter
+            osName : str
+                osName inclusion filter
+            osFamily : str
+                osFamily inclusion filter
+            osArch : str
+                osArch inclusion filter
+            osVersion : str
+                osVersion inclusion filter
             name : str
                 name inclusion filter
-            exlude-hostname : str
+            excludeHostname : str
                 hostname exclusion filter
-            exlude-tags : str
+            excludeTags : str
                 tags exclusion filter
-            exlude-os-name : str
-                os-name exclusion filter
-            exlude-os-family : str
-                os-family exclusion filter
-            exlude-os-arch : str
-                os-arch exclusion filter
-            exlude-os-version : str
-                os-version exclusion filter
-            exlude-name : str
+            excludeOsName : str
+                osName exclusion filter
+            excludeOsFamily : str
+                osFamily exclusion filter
+            excludeOsArch : str
+                osArch exclusion filter
+            excludeOsVersion : str
+                osVersion exclusion filter
+            excludeName : str
                 name exclusion filter
 
         :return: A list of resources or a string representing the requested resources in the

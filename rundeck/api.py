@@ -312,44 +312,47 @@ class RundeckApiTolerant(object):
                 logging level (default: 'INFO')
             asUser : str
                 user to run the job as
-            exclude-precedence : bool
+            exclude_precedence : bool
                 set the exclusion precedence (default True)
             hostname : str
                 hostname inclusion filter
             tags : str
                 tags inclusion filter
-            os-name : str
-                os-name inclusion filter
-            os-family : str
-                os-family inclusion filter
-            os-arch : str
-                os-arch inclusion filter
-            os-version : str
-                os-version inclusion filter
+            osName : str
+                osName inclusion filter
+            osFamily : str
+                osFamily inclusion filter
+            osArch : str
+                osArch inclusion filter
+            osVersion : str
+                osVersion inclusion filter
             name : str
                 name inclusion filter
-            exlude-hostname : str
+            excludeHostname : str
                 hostname exclusion filter
-            exlude-tags : str
+            excludeTags : str
                 tags exclusion filter
-            exlude-os-name : str
-                os-name exclusion filter
-            exlude-os-family : str
-                os-family exclusion filter
-            exlude-os-arch : str
-                os-arch exclusion filter
-            exlude-os-version : str
-                os-version exclusion filter
-            exlude-name : str
+            excludeOsName : str
+                osName exclusion filter
+            excludeOsFamily : str
+                osFamily exclusion filter
+            excludeOsArch : str
+                osArch exclusion filter
+            excludeOsVersion : str
+                osVersion exclusion filter
+            excludeName : str
                 name exclusion filter
 
         :return: A :class:`~.rundeck.connection.RundeckResponse`
         :rtype: :class:`~.rundeck.connection.RundeckResponse`
         """
-        params = cull_kwargs(('argString', 'loglevel', 'asUser', 'exclude-precedence', \
-            'hostname', 'tags', 'os-name', 'os-family', 'os-arch', 'os-version', 'name', \
-            'exlude-hostname', 'exlude-tags', 'exlude-os-name', 'exlude-os-family', \
-            'exlude-os-arch', 'exlude-os-version', 'exlude-name'), kwargs)
+        params = cull_kwargs(('argString', 'loglevel', 'asUser',
+                              'excludePrecedence', 'hostname', 'tags',
+                              'osName', 'osFamily', 'osArch', 'osVersion',
+                              'name', 'excludeHostname', 'excludeTags',
+                              'excludeOsName', 'excludeOsFamily',
+                              'excludeOsArch', 'excludeOsVersion',
+                              'excludeName'), kwargs)
 
         argString = params.get('argString', None)
         if argString is not None:
@@ -579,7 +582,7 @@ class RundeckApiTolerant(object):
                 an exact group path to exclude, special "-" setting matches top level jobs only
             jobExactFilter : str
                 an exact job name
-            exludeJobExactFilter : str
+            excludeJobExactFilter : str
                 an exact job name to exclude
             max : int
                 maximum number of results to include in response (default: 20)
@@ -595,7 +598,7 @@ class RundeckApiTolerant(object):
             'begin', 'end', 'adhoc', 'jobIdListFilter', 'excludeJobIdListFilter', \
             'jobListFilter', 'excludeJobListFilter', 'groupPath', 'groupPathExact', \
             'excludeGroupPath', 'excludeGroupPathExact', 'jobExactFilter', \
-            'exludeJobExactFilter', 'max', 'offset'), kwargs)
+            'excludeJobExactFilter', 'max', 'offset'), kwargs)
         params['project'] = project
 
         return self._exec(GET, 'executions', params=params, **kwargs)
@@ -673,38 +676,39 @@ class RundeckApiTolerant(object):
                 hostname inclusion filter
             tags : str
                 tags inclusion filter
-            os-name : str
-                os-name inclusion filter
-            os-family : str
-                os-family inclusion filter
-            os-arch : str
-                os-arch inclusion filter
-            os-version : str
-                os-version inclusion filter
+            osName : str
+                osName inclusion filter
+            osFamily : str
+                osFamily inclusion filter
+            osArch : str
+                osArch inclusion filter
+            osVersion : str
+                osVersion inclusion filter
             name : str
                 name inclusion filter
-            exlude-hostname : str
+            excludeHostname : str
                 hostname exclusion filter
-            exlude-tags : str
+            excludeTags : str
                 tags exclusion filter
-            exlude-os-name : str
-                os-name exclusion filter
-            exlude-os-family : str
-                os-family exclusion filter
-            exlude-os-arch : str
-                os-arch exclusion filter
-            exlude-os-version : str
-                os-version exclusion filter
-            exlude-name : str
+            excludeOsName : str
+                osName exclusion filter
+            excludeOsFamily : str
+                osFamily exclusion filter
+            excludeOsArch : str
+                osArch exclusion filter
+            excludeOsVersion : str
+                osVersion exclusion filter
+            excludeName : str
                 name exclusion filter
 
         :return: A :class:`~.rundeck.connection.RundeckResponse`
         :rtype: :class:`~.rundeck.connection.RundeckResponse`
         """
         params = cull_kwargs(('nodeThreadcount', 'nodeKeepgoing', 'asUser', 'hostname', 'tags', \
-            'os-name', 'os-family', 'os-arch', 'os-version', 'name', 'exlude-hostname', \
-            'exlude-tags', 'exlude-os-name', 'exlude-os-family', 'exlude-os-arch', \
-            'exlude-os-version', 'exlude-name'), kwargs)
+            'osName', 'osFamily', 'osArch', 'osVersion', 'name',
+            'excludeHostname', 'excludeTags', 'excludeOsName',
+            'excludeOsFamily', 'excludeOsArch', 'excludeOsVersion',
+            'excludeName'), kwargs)
 
         params['project'] = project
         params['exec'] = command
@@ -742,39 +746,40 @@ class RundeckApiTolerant(object):
                 hostname inclusion filter
             tags : str
                 tags inclusion filter
-            os-name : str
-                os-name inclusion filter
-            os-family : str
-                os-family inclusion filter
-            os-arch : str
-                os-arch inclusion filter
-            os-version : str
-                os-version inclusion filter
+            osName : str
+                osName inclusion filter
+            osFamily : str
+                osFamily inclusion filter
+            osArch : str
+                osArch inclusion filter
+            osVersion : str
+                osVersion inclusion filter
             name : str
                 name inclusion filter
-            exlude-hostname : str
+            excludeHostname : str
                 hostname exclusion filter
-            exlude-tags : str
+            excludeTags : str
                 tags exclusion filter
-            exlude-os-name : str
-                os-name exclusion filter
-            exlude-os-family : str
-                os-family exclusion filter
-            exlude-os-arch : str
-                os-arch exclusion filter
-            exlude-os-version : str
-                os-version exclusion filter
-            exlude-name : str
+            excludeOsName : str
+                osName exclusion filter
+            excludeOsFamily : str
+                osFamily exclusion filter
+            excludeFsArch : str
+                osArch exclusion filter
+            excludeOsVersion : str
+                osVersion exclusion filter
+            excludeName : str
                 name exclusion filter
 
         :return: A :class:`~.rundeck.connection.RundeckResponse`
         :rtype: :class:`~.rundeck.connection.RundeckResponse`
         """
         params = cull_kwargs(('argString', 'nodeThreadcount', 'nodeKeepgoing', 'asUser', \
-            'scriptInterpreter', 'interpreterArgsQuoted', 'hostname', 'tags', 'os-name', \
-            'os-family', 'os-arch', 'os-version', 'name', 'exlude-hostname', 'exlude-tags', \
-            'exlude-os-name', 'exlude-os-family', 'exlude-os-arch', 'exlude-os-version', \
-            'exlude-name'), kwargs)
+            'scriptInterpreter', 'interpreterArgsQuoted', 'hostname', 'tags',
+            'osName', 'osFamily', 'osArch', 'osVersion', 'name',
+            'excludeHostname', 'excludeTags', 'excludeOsName',
+            'excludeOsFamily', 'excludeOsArch', 'excludeOsVersion',
+            'excludeName'), kwargs)
 
         params['project'] = project
         files = {'scriptFile': scriptFile}
@@ -821,29 +826,29 @@ class RundeckApiTolerant(object):
                 hostname inclusion filter
             tags : str
                 tags inclusion filter
-            os-name : str
-                os-name inclusion filter
-            os-family : str
-                os-family inclusion filter
-            os-arch : str
-                os-arch inclusion filter
-            os-version : str
-                os-version inclusion filter
+            osName : str
+                oName inclusion filter
+            osFamily : str
+                osFamily inclusion filter
+            osArch : str
+                osArch inclusion filter
+            osVersion : str
+                osVersion inclusion filter
             name : str
                 name inclusion filter
-            exlude-hostname : str
+            excludeHostname : str
                 hostname exclusion filter
-            exlude-tags : str
+            excludeTags : str
                 tags exclusion filter
-            exlude-os-name : str
-                os-name exclusion filter
-            exlude-os-family : str
-                os-family exclusion filter
-            exlude-os-arch : str
-                os-arch exclusion filter
-            exlude-os-version : str
-                os-version exclusion filter
-            exlude-name : str
+            excludeOsName : str
+                osName exclusion filter
+            excludeOsFamily : str
+                osFamily exclusion filter
+            excludeOsArch : str
+                osArch exclusion filter
+            excludeOsVersion : str
+                osVersion exclusion filter
+            excludeName : str
                 name exclusion filter
 
         :return: A :class:`~.rundeck.connection.RundeckResponse`
@@ -852,10 +857,11 @@ class RundeckApiTolerant(object):
         self.requires_version(4)
 
         data = cull_kwargs(('argString', 'nodeThreadcount', 'nodeKeepgoing', 'asUser', \
-            'scriptInterpreter', 'interpreterArgsQuoted', 'hostname', 'tags', 'os-name', \
-            'os-family', 'os-arch', 'os-version', 'name', 'exlude-hostname', 'exlude-tags', \
-            'exlude-os-name', 'exlude-os-family', 'exlude-os-arch', 'exlude-os-version', \
-            'exlude-name'), kwargs)
+            'scriptInterpreter', 'interpreterArgsQuoted', 'hostname', 'tags',
+            'osName', 'osFamily', 'osArch', 'osVersion', 'name',
+            'excludeHostname', 'excludeTags', 'excludeOsName',
+            'excludeOsFamily', 'excludeOsArch', 'excludeOsVersion',
+            'excludeName'), kwargs)
 
         data['project'] = project
         data['scriptURL'] = scriptURL
@@ -991,29 +997,29 @@ class RundeckApiTolerant(object):
                 hostname inclusion filter
             tags : str
                 tags inclusion filter
-            os-name : str
-                os-name inclusion filter
-            os-family : str
-                os-family inclusion filter
-            os-arch : str
-                os-arch inclusion filter
-            os-version : str
-                os-version inclusion filter
+            osName : str
+                osName inclusion filter
+            osFamily : str
+                osFamily inclusion filter
+            osArch : str
+                osArch inclusion filter
+            osVersion : str
+                osVersion inclusion filter
             name : str
                 name inclusion filter
-            exlude-hostname : str
+            excludeHostname : str
                 hostname exclusion filter
-            exlude-tags : str
+            excludeTags : str
                 tags exclusion filter
-            exlude-os-name : str
-                os-name exclusion filter
-            exlude-os-family : str
-                os-family exclusion filter
-            exlude-os-arch : str
-                os-arch exclusion filter
-            exlude-os-version : str
-                os-version exclusion filter
-            exlude-name : str
+            excludeOsName : str
+                osName exclusion filter
+            excludeOsFamily : str
+                osFamily exclusion filter
+            excludeOsArch : str
+                osArch exclusion filter
+            excludeOsVersion : str
+                osVersion exclusion filter
+            excludeName : str
                 name exclusion filter
 
         :return: A :class:`~.rundeck.connection.RundeckResponse`
@@ -1022,9 +1028,10 @@ class RundeckApiTolerant(object):
         self.requires_version(2)
 
         params = cull_kwargs(('fmt', 'scriptInterpreter', 'interpreterArgsQuoted', 'hostname', \
-            'tags', 'os-name', 'os-family', 'os-arch', 'os-version', 'name', 'exlude-hostname', \
-            'exlude-tags', 'exlude-os-name', 'exlude-os-family', 'exlude-os-arch', \
-            'exlude-os-version', 'exlude-name'), kwargs)
+            'tags', 'osName', 'osFamily', 'osArch', 'osVersion', 'name',
+            'excludeHostname', 'excludeTags', 'excludeOsName',
+            'excludeOsFamily', 'excludeOsArch', 'excludeOsVersion',
+            'excludeName'), kwargs)
 
         if 'fmt' in params:
             params['format'] = params.pop('fmt')
