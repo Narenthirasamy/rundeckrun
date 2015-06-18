@@ -312,7 +312,7 @@ class RundeckApiTolerant(object):
                 logging level (default: 'INFO')
             asUser : str
                 user to run the job as
-            exclude_precedence : bool
+            excludePrecedence : bool
                 set the exclusion precedence (default True)
             hostname : str
                 hostname inclusion filter
